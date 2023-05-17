@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { _mock } from 'mock';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,9 @@ import { _mock } from 'mock';
 export class AppComponent {
   title = 'poc-sharing';
   data = _mock;
+  constructor(private meta: Meta) { }
+
+  onShareClick(item: any){
+    this.meta.updateTag({ name: 'og:image', content: item.image });
+  }
 }

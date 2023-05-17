@@ -8,7 +8,7 @@
         [ngStyle]="{ backgroundImage: 'url(' + house.image + ')' }"
       ></div>
       <div class="share">
-        <button class="share-btn" shareButton="whatsapp">Compartilhar</button>
+        <button (click)="onShareClick(house)" class="share-btn" shareButton="whatsapp">Compartilhar</button>
       </div>
     </div>
   </div>
