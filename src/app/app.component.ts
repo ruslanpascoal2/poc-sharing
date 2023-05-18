@@ -14,5 +14,6 @@ export class AppComponent {
 
   onShareClick(item: any){
     this.meta.updateTag({ name: 'og:image', content: item.image });
+    this.meta.updateTag({ name: 'description', content: item.desc });
   }
 }
